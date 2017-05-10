@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Windows 10
+Exec=/usr/share/vms/win10-dgpu-workstation/launch.sh
+Icon=preferences-desktop-remote-desktop.png
+Type=Application
+Categories=Devenopment;
