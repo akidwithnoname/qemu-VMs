@@ -5,18 +5,18 @@
 function initvm {
 
 echo "unbind AMD Radeon HD 7750 GPU from radeon kernel module"
-echo -n '0000:01:00.0' >/dev/null /sys/bus/pci/drivers/radeon/unbind
+echo -n '0000:01:00.0' > /sys/bus/pci/drivers/radeon/unbind
 #echo '0000:01:00.0' >/dev/null | tee /sys/bus/pci/devices/0000:01:00.0/driver/unbind
 
 echo "bind AMD Radeon HD 7750 GPU to vfio-pci kernel module"
-echo -n '0000:01:00.1' >dev/null /sys/bus/pci/drivers/vfio-pci/bind
+echo -n '0000:01:00.1' > /sys/bus/pci/drivers/vfio-pci/bind
 
 echo "unbind AMD Radeon HD 7750 HDMI Audio device from snd_hda_intel kernel module" 
-echo -n '0000:01:00.1' >/dev/null /sys/bus/pci/drivers/snd_hda_intel/unbind
+echo -n '0000:01:00.1' > /sys/bus/pci/drivers/snd_hda_intel/unbind
 #echo '0000:01:00.1' >/dev/null | tee /sys/bus/pci/devices/0000:01:00.1/driver/unbind
 
 echo "bind AMD Radeon HD 7750 HDMI Audio device to vfio-pci kernel module" 
-echo -n '0000:01:00.1' >/dev/null /sys/bus/pci/drivers/vfio-pci/bind 
+echo -n '0000:01:00.1' > /sys/bus/pci/drivers/vfio-pci/bind 
 
 echo "load kernel modules:"
 
